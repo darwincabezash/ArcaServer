@@ -9,10 +9,9 @@ require("core-js/modules/es.promise.js");
 
 //Clave de la base de datos
 //eXUm9alHXEvVxNl1
-var mongoose = require('mongoose'); //const url = 'mongodb+srv://DESARROLLO:x1012x1310xxxx@cluster0.vsjsk.mongodb.net/Desarrollo?retryWrites=true&w=majority';
+var mongoose = require('mongoose');
 
-
-const url = 'mongodb+srv://darwin:eXUm9alHXEvVxNl1@cluster0.5szny.mongodb.net/Desarrollo?retryWrites=true&w=majority';
+const url = 'mongodb+srv://darwincabezas:x1012x1310xxxx@cluster0.vsjsk.mongodb.net/Produccion?retryWrites=true&w=majority';
 
 async function conectarMongoDB() {
   try {
@@ -23,4 +22,4 @@ async function conectarMongoDB() {
     console.log('Error on connection: ' + e);
   }
 }
-//# sourceMappingURL=databaseDev.js.map
+//# sourceMappingURL=databasePro.js.map
