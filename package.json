@@ -6,10 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel src -d public --source-maps",
-    "startN": "nodemon src/index.js --exec babel-node",
-    "start":"node src/index.js",
-    "serve": "node dist/index.js",
-    "clean": "rimraf dist"
+    "start": "nodemon src/index.js --exec babel-node",
+    
+    "serve": "node public/index.js",
+    "clean": "rimraf public"
   },
   "keywords": [],
   "author": "",

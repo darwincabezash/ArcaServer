@@ -8,7 +8,7 @@ const cors = require('cors')
 const server = express();
 
 conectarMongoDB();
-const port= 3000;
+const port=  process.env.port || 3000;
 
 server.use(cors()); 
 
@@ -22,7 +22,11 @@ server.use("/graphql",graphqlHTTP({
 
 server.get("/",(req,res)=>{
     res.json({message:"Servidor Activo en puerto "+port})
-})
+});
+
+server.get("/test",(req,res)=>{
+  res.json({message:"Servidor Funcionando"+port})
+});
 
 server.listen(port, () =>{
     console.log("Servidor corriendo en puerto "+port);
