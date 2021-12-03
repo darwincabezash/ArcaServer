@@ -10,8 +10,10 @@ const personaSchema = new Schema({
     segundoNombre:String,
     primerApellido:String,
     segundoApellido:String,
+    fechaNacimiento:String,
     telefono:String,
     celular:String,
+    direccion:String,
     email:String,
     sexo:String,
     foto:String

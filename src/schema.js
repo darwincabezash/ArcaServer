@@ -1,174 +1,20 @@
 import { makeExecutableSchema } from "@graphql-tools/schema";
-import {resolvers} from "./resolvers";
 
-const typeDefs = `
-
-type Query{
-    hello:String
-    nuevo(name: String!):String
-    greet(name: String!):String
-    usandoDestructuracion(name: String):String
-    task:[Task]
-    user:[User]
-    persona:[Persona]   
-
-}
-
-type Task{
-    _id:ID
-    title:String!
-    description:String!
-    number:Int
-}
-
-type User{
-    _id:ID
-    firstName:String
-    lastName:String
-    age:Int
-}
-
-type Persona{
-    _id:ID
-    cedula:String
-    primerNombre:String
-    segundoNombre:String
-    primerApellido:String
-    segundoApellido:String
-    telefono:String
-    celular:String
-    email:String
-    sexo:String
-    foto:String
-}
+//Schemas
+import {Persona} from "./schemas/persona.js";
+import {TipoPersona} from "./schemas/tipoPersona.js";
+import {User} from "./schemas/user.js";
+import {Task} from "./schemas/task.js";
+import { TipoProcesoS } from "./schemas/tipoProcesoS.js";
 
 
+//Resolvers
+import {PersonaR} from "./resolvers/personaR.js";
+import {TipoPersonaR} from "./resolvers/tipoPersonaR.js";
+import {TipoProcesoR} from "./resolvers/tipoProcesoR.js";
 
-
-type Mutation{
-    createTask(input:TaskInput):Task
-    createUser(input:UserInput):User
-    deleteUser(_id:ID):User
-    updateUser(_id:ID,input:UserInput):User
-    crearPersona(input:PersonaInput):Persona
-
-}
-
-input TaskInput{
-    title:String!
-    description:String!
-    number:Int 
-}
-
-input UserInput{
-    firstName:String
-    lastName:String
-    age:Int
-}
-
-input PersonaInput{
-    cedula:String
-    primerNombre:String
-    segundoNombre:String
-    primerApellido:String
-    segundoApellido:String
-    telefono:String
-    celular:String
-    email:String
-    sexo:String
-    foto:String
-}
-
-
-`;
 
 export default makeExecutableSchema({
-    typeDefs:typeDefs,
-    resolvers:resolvers
+    typeDefs:[Persona,TipoPersona,User,Task,TipoProcesoS],
+    resolvers:[PersonaR,TipoPersonaR,TipoProcesoR]
 });
-
-
-
-/*
-
-const typeDefs = `
-
-type Query{
-    hello:String
-    nuevo(name: String!):String
-    greet(name: String!):String
-    usandoDestructuracion(name: String):String
-    task:[Task]
-    user:[User]
-    persona:[Persona]   
-
-}
-
-type Task{
-    _id:ID
-    title:String!
-    description:String!
-    number:Int
-}
-
-type User{
-    _id:ID
-    firstName:String
-    lastName:String
-    age:Int
-}
-
-type Persona{
-    _id:ID
-    cedula:String
-    primerNombre:String
-    segundoNombre:String
-    primerApellido:String
-    segundoApellido:String
-    telefono:String
-    celular:String
-    email:String
-    sexo:String
-    foto:String
-}
-
-
-
-type Mutation{
-    createTask(input:TaskInput):Task
-    createUser(input:UserInput):User
-    deleteUser(_id:ID):User
-    updateUser(_id:ID,input:UserInput):User
-    crearPersona(input:PersonaInput):Persona
-
-}
-
-input TaskInput{
-    title:String!
-    description:String!
-    number:Int 
-}
-
-input UserInput{
-    firstName:String
-    lastName:String
-    age:Int
-}
-
-input PersonaInput{
-    cedula:String
-    primerNombre:String
-    segundoNombre:String
-    primerApellido:String
-    segundoApellido:String
-    telefono:String
-    celular:String
-    email:String
-    sexo:String
-    foto:String
-}
-
-
-`;
-
-*/
