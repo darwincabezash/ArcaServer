@@ -16,3 +16,5 @@ export class DatoBasicoPersona{
     sexo:String
     foto:String
 }
+
+//EL NOMBRE DE ESTE ARCHIVO DEBE SER PERSONA, NO PERSON

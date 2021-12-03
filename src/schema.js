@@ -6,15 +6,17 @@ import {TipoPersona} from "./schemas/tipoPersona.js";
 import {User} from "./schemas/user.js";
 import {Task} from "./schemas/task.js";
 import { TipoProcesoS } from "./schemas/tipoProcesoS.js";
+import { GrupoS } from "./schemas/grupoS.js";
 
 
 //Resolvers
 import {PersonaR} from "./resolvers/personaR.js";
 import {TipoPersonaR} from "./resolvers/tipoPersonaR.js";
 import {TipoProcesoR} from "./resolvers/tipoProcesoR.js";
+import {GrupoR} from "./resolvers/grupoR.js";
 
 
 export default makeExecutableSchema({
-    typeDefs:[Persona,TipoPersona,User,Task,TipoProcesoS],
-    resolvers:[PersonaR,TipoPersonaR,TipoProcesoR]
+    typeDefs:[Persona,TipoPersona,User,Task,TipoProcesoS,GrupoS],
+    resolvers:[PersonaR,TipoPersonaR,TipoProcesoR,GrupoR]
 });
