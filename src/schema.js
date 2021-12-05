@@ -8,6 +8,8 @@ import {Task} from "./schemas/task.js";
 import { TipoProcesoS } from "./schemas/tipoProcesoS.js";
 import { GrupoS } from "./schemas/grupoS.js";
 import { EscuelaS } from "./schemas/escuelaS.js";
+import { EtapaS } from "./schemas/etapaS.js";
+import { UsuarioS } from "./schemas/usuarioS.js";
 
 
 //Resolvers
@@ -16,9 +18,11 @@ import {TipoPersonaR} from "./resolvers/tipoPersonaR.js";
 import {TipoProcesoR} from "./resolvers/tipoProcesoR.js";
 import {GrupoR} from "./resolvers/grupoR.js";
 import {EscuelaR} from "./resolvers/escuelaR.js";
+import {EtapaR} from "./resolvers/etapaR.js";
+import {UsuarioR} from "./resolvers/usuarioR.js";
 
 
 export default makeExecutableSchema({
-    typeDefs:[Persona,TipoPersona,User,Task,TipoProcesoS,GrupoS,EscuelaS],
-    resolvers:[PersonaR,TipoPersonaR,TipoProcesoR,GrupoR,EscuelaR]
+    typeDefs:[Persona,TipoPersona,User,Task,TipoProcesoS,GrupoS,EscuelaS,EtapaS,UsuarioS],
+    resolvers:[PersonaR,TipoPersonaR,TipoProcesoR,GrupoR,EscuelaR,EtapaR,UsuarioR]
 });

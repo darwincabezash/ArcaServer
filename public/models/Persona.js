@@ -17,8 +17,10 @@ const personaSchema = new _mongoose.Schema({
   segundoNombre: String,
   primerApellido: String,
   segundoApellido: String,
+  fechaNacimiento: String,
   telefono: String,
   celular: String,
+  direccion: String,
   email: String,
   sexo: String,
   foto: String
