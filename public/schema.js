@@ -7,43 +7,43 @@ exports.default = void 0;
 
 var _schema = require("@graphql-tools/schema");
 
-var _persona = require("./schemas/persona.js");
+var _persona = require("./schemas/personas/persona.js");
 
-var _tipoPersona = require("./schemas/tipoPersona.js");
+var _tipoPersona = require("./schemas/personas/tipoPersona.js");
 
-var _user = require("./schemas/user.js");
+var _tipoProcesoS = require("./schemas/configuraciones/tipoProcesoS.js");
 
-var _task = require("./schemas/task.js");
+var _grupoS = require("./schemas/configuraciones/grupoS.js");
 
-var _tipoProcesoS = require("./schemas/tipoProcesoS.js");
+var _escuelaS = require("./schemas/configuraciones/escuelaS.js");
 
-var _grupoS = require("./schemas/grupoS.js");
+var _etapaS = require("./schemas/configuraciones/etapaS.js");
 
-var _escuelaS = require("./schemas/escuelaS.js");
+var _usuarioS = require("./schemas/personas/usuarioS");
 
-var _etapaS = require("./schemas/etapaS.js");
+var _permisoS = require("./schemas/configuraciones/permisoS");
 
-var _usuarioS = require("./schemas/usuarioS.js");
+var _personaR = require("./resolvers/personas/personaR.js");
 
-var _personaR = require("./resolvers/personaR.js");
+var _tipoPersonaR = require("./resolvers/personas/tipoPersonaR.js");
 
-var _tipoPersonaR = require("./resolvers/tipoPersonaR.js");
+var _tipoProcesoR = require("./resolvers/configuraciones/tipoProcesoR.js");
 
-var _tipoProcesoR = require("./resolvers/tipoProcesoR.js");
+var _grupoR = require("./resolvers/configuraciones/grupoR.js");
 
-var _grupoR = require("./resolvers/grupoR.js");
+var _escuelaR = require("./resolvers/configuraciones/escuelaR.js");
 
-var _escuelaR = require("./resolvers/escuelaR.js");
+var _etapaR = require("./resolvers/configuraciones/etapaR.js");
 
-var _etapaR = require("./resolvers/etapaR.js");
+var _usuarioR = require("./resolvers/personas/usuarioR");
 
-var _usuarioR = require("./resolvers/usuarioR.js");
+var _permisoR = require("./resolvers/configuraciones/permisoR");
 
 //Schemas
 //Resolvers
 var _default = (0, _schema.makeExecutableSchema)({
-  typeDefs: [_persona.Persona, _tipoPersona.TipoPersona, _user.User, _task.Task, _tipoProcesoS.TipoProcesoS, _grupoS.GrupoS, _escuelaS.EscuelaS, _etapaS.EtapaS, _usuarioS.UsuarioS],
-  resolvers: [_personaR.PersonaR, _tipoPersonaR.TipoPersonaR, _tipoProcesoR.TipoProcesoR, _grupoR.GrupoR, _escuelaR.EscuelaR, _etapaR.EtapaR, _usuarioR.UsuarioR]
+  typeDefs: [_persona.Persona, _tipoPersona.TipoPersona, _tipoProcesoS.TipoProcesoS, _grupoS.GrupoS, _escuelaS.EscuelaS, _etapaS.EtapaS, _usuarioS.UsuarioS, _permisoS.PermisoS],
+  resolvers: [_personaR.PersonaR, _tipoPersonaR.TipoPersonaR, _tipoProcesoR.TipoProcesoR, _grupoR.GrupoR, _escuelaR.EscuelaR, _etapaR.EtapaR, _usuarioR.UsuarioR, _permisoR.PermisoR]
 });
 
 exports.default = _default;
