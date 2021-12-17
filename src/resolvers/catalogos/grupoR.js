@@ -1,4 +1,4 @@
-import GrupoM from "../../models/configuraciones/GrupoM.js"
+import GrupoM from "../../models/catalogos/GrupoM.js"
 
 export const GrupoR = {
     Query: {

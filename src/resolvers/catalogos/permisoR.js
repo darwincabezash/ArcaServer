@@ -1,4 +1,4 @@
-import PermisoM  from "../../models/configuraciones/PermisoM";
+import PermisoM  from "../../models/catalogos/PermisoM";
 
 export const PermisoR = {
     Query: {

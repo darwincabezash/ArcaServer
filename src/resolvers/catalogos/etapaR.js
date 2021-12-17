@@ -1,4 +1,4 @@
-import EtapaM from "../../models/configuraciones/EtapaM.js"
+import EtapaM from "../../models/catalogos/EtapaM.js"
 
 export const EtapaR = {
     Query: {
