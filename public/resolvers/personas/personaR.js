@@ -13,17 +13,26 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const PersonaR = {
   Query: {
-    async persona() {
+    async persona(_, _ref) {
+      let {
+        input
+      } = _ref;
+      return await _Persona.default.find({
+        "_id": input._id
+      }).limit(1);
+    },
+
+    async personas() {
       return await _Persona.default.find();
     }
 
   },
   Mutation: {
     //Crear Persona
-    async crearPersona(_, _ref) {
+    async crearPersona(_, _ref2) {
       let {
         input
-      } = _ref;
+      } = _ref2;
       console.log(input);
       const nuevaPersona = new _Persona.default(input);
       await nuevaPersona.save();

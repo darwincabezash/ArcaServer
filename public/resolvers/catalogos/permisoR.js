@@ -7,7 +7,7 @@ exports.PermisoR = void 0;
 
 require("core-js/modules/es.promise.js");
 
-var _PermisoM = _interopRequireDefault(require("../../models/configuraciones/PermisoM"));
+var _PermisoM = _interopRequireDefault(require("../../models/catalogos/PermisoM"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

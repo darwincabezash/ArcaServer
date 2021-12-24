@@ -7,7 +7,7 @@ exports.TipoProcesoR = void 0;
 
 require("core-js/modules/es.promise.js");
 
-var _TipoProcesoM = _interopRequireDefault(require("../../models/configuraciones/TipoProcesoM.js"));
+var _TipoProcesoM = _interopRequireDefault(require("../../models/catalogos/TipoProcesoM.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

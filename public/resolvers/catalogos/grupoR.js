@@ -7,7 +7,7 @@ exports.GrupoR = void 0;
 
 require("core-js/modules/es.promise.js");
 
-var _GrupoM = _interopRequireDefault(require("../../models/configuraciones/GrupoM.js"));
+var _GrupoM = _interopRequireDefault(require("../../models/catalogos/GrupoM.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

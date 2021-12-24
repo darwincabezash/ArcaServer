@@ -21,6 +21,10 @@ const UsuarioR = {
         "usuario": input.usuario,
         "password": input.password
       }).limit(1);
+    },
+
+    async usuarios() {
+      return await _UsuarioM.default.find();
     }
 
   },

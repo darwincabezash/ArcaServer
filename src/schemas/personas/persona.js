@@ -1,9 +1,9 @@
 
 export const Persona=`
 type Query{
-    persona:[Persona]   
+    personas:[Persona]   
+    persona(input:PersonaInputBuscarId):[Persona]
 }
-
 
 type Persona{
     _id:ID
@@ -22,7 +22,11 @@ type Persona{
 }
 
 
-input PersonaInput{
+input PersonaInputBuscarId{
+    _id:ID
+}
+
+input PersonaInputTodo{
     cedula:String
     primerNombre:String
     segundoNombre:String
@@ -38,6 +42,6 @@ input PersonaInput{
 }
 
 type Mutation{
-    crearPersona(input:PersonaInput):Persona
+    crearPersona(input:PersonaInputTodo):Persona
 }
 `

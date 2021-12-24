@@ -2,8 +2,8 @@ import {Schema, model  } from "mongoose";
 
 const usuarioSchema = new Schema({
     usuario:String,
-    password:String,
-    permisos:[Schema.Types.ObjectId]
+    password: String,
+    _idPersona:String,
 });
 
 export default model("UsuarioM",usuarioSchema);

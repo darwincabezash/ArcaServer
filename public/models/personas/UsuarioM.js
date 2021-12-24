@@ -10,7 +10,7 @@ var _mongoose = require("mongoose");
 const usuarioSchema = new _mongoose.Schema({
   usuario: String,
   password: String,
-  permisos: [_mongoose.Schema.Types.ObjectId]
+  _idPersona: String
 });
 
 var _default = (0, _mongoose.model)("UsuarioM", usuarioSchema);

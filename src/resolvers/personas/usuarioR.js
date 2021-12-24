@@ -4,6 +4,9 @@ export const UsuarioR = {
     Query: {
         async usuario(_, { input }) {
             return await UsuarioM.find({"usuario":input.usuario,"password":input.password}).limit(1);
+        },
+        async usuarios() {
+            return await UsuarioM.find();
         }
     }, Mutation: {        
         //Crear Usuario
