@@ -37,6 +37,17 @@ const PersonaR = {
       const nuevaPersona = new _Persona.default(input);
       await nuevaPersona.save();
       return nuevaPersona;
+    },
+
+    //Actualizar Persona
+    async actualizarPersona(_, _ref3) {
+      let {
+        _id,
+        input
+      } = _ref3;
+      return await _Persona.default.findByIdAndUpdate(_id, input, {
+        new: true
+      });
     }
 
   }

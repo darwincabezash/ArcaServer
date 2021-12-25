@@ -8,4 +8,4 @@ const tipoProcesoSchema = new Schema({
     tipo:String,
 });
 
-export default model("TipoProcesoM",tipoProcesoSchema);
+export default model("TipoProcesoM", tipoProcesoSchema);

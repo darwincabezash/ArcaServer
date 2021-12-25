@@ -16,6 +16,10 @@ export const PersonaR = {
             await nuevaPersona.save();
             return nuevaPersona;
         },
+        //Actualizar Persona
+        async actualizarPersona(_, { _id,input }) {
+            return await Persona.findByIdAndUpdate(_id, input, { new: true });
+        },
     }
 
 }
