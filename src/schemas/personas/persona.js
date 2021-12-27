@@ -2,6 +2,7 @@
 export const Persona=`
 type Query{
     personas:[Persona]   
+    personasEliminadas:[Persona]   
     persona(input:PersonaInputBuscarId):[Persona]
 }
 
@@ -20,6 +21,8 @@ type Persona{
     sexo:String
     foto:String
     tipoPersona:String
+    estado:Boolean
+
 
     nombreIglesiaOrigen:String
     cargoEjercido:String 
@@ -144,7 +147,6 @@ type SeminarioInput{
 type Mutation{
     crearPersona(input:PersonaInputTodo):Persona
     actualizarPersona(_id:ID,input:PersonaInputTodo):Persona
-
-
+    eliminarPersona(_id:ID):Persona
 }
 `

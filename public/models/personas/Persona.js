@@ -40,6 +40,7 @@ const personaSchema = new _mongoose.Schema({
   sexo: String,
   foto: String,
   tipoPersona: String,
+  estado: Boolean,
   nombreIglesiaOrigen: String,
   cargoEjercido: String,
   tiempoPermanencia: Number,

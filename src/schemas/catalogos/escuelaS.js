@@ -2,6 +2,7 @@
 export const EscuelaS=`
 type Query{
     escuela:[Escuela]   
+    escuelaCantidad:Int
 }
 
 type Escuela{

@@ -15,6 +15,10 @@ const EscuelaR = {
   Query: {
     async escuela() {
       return await _EscuelaM.default.find();
+    },
+
+    async escuelaCantidad() {
+      return await _EscuelaM.default.count();
     }
 
   },

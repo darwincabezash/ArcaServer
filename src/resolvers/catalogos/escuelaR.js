@@ -4,7 +4,12 @@ export const EscuelaR = {
     Query: {
         async escuela() {
             return await EscuelaM.find();
-        }
+        },
+
+        async escuelaCantidad() {
+            return await EscuelaM.count();
+        },
+        
     }, Mutation: {        
         //Crear Escuela
         async crearEscuela(_, { input }) {

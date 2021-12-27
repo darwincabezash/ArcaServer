@@ -37,7 +37,8 @@ const personaSchema = new Schema({
     email:String,
     sexo:String,
     foto: String,
-    tipoPersona:String,
+    tipoPersona: String,
+    estado:Boolean,
     
     nombreIglesiaOrigen:String,
     cargoEjercido:String,
