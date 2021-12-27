@@ -10,7 +10,7 @@ const server = express();
 conectarMongoDB();
 const port=  process.env.port || 3000;
 
-//server.use(cors()); 
+server.use(cors()); 
 
 server.use("/graphql",graphqlHTTP({
     graphiql:true,
