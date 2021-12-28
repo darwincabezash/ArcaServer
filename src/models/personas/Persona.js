@@ -2,7 +2,8 @@ import {Schema, model  } from "mongoose";
 
 const escuelaSchema = new Schema({
     tipo:String,
-    color:String
+    color: String,
+    idEscuela:String
   });
 
 const tipoProcesoSchema = new Schema({

@@ -55,6 +55,7 @@ type Escuela{
     _id:ID
     tipo:String
     color:String
+    idEscuela:String
 }
 
 type TipoProceso{
@@ -127,6 +128,7 @@ input PersonaInputTodo{
 input EscuelaInput{
     tipo:String
     color:String
+    idEscuela:String
 }
 
 type TipoProcesoInput{

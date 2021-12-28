@@ -9,7 +9,8 @@ var _mongoose = require("mongoose");
 
 const escuelaSchema = new _mongoose.Schema({
   tipo: String,
-  color: String
+  color: String,
+  idEscuela: String
 });
 const tipoProcesoSchema = new _mongoose.Schema({
   tipo: String
