@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../src/schemas/utilidades/utilidadesS.js"],"names":["UtilidadesS"],"mappings":";;;;;;AACO,MAAMA,WAAW,mDAAjB","sourcesContent":["\nexport const UtilidadesS=`\ntype Query{\n    servidorActivo:Boolean\n}\n`\n"],"file":"utilidadesS.js"}
