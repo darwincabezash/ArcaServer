@@ -7,6 +7,7 @@ const escuelaSchema = new Schema({
     },*/
     tipo:String,
     color: String,
+    colorTextoNegro:Boolean
 });
 
 export default model("EscuelaM",escuelaSchema);

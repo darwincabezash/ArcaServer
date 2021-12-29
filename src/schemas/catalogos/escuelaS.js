@@ -9,11 +9,13 @@ type Escuela{
     _id:ID
     tipo:String
     color:String
+    colorTextoNegro:Boolean
 }
 
 input EscuelaInput{
     tipo:String
     color:String
+    colorTextoNegro:Boolean
 }
 
 type Mutation{

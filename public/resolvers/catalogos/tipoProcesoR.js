@@ -15,6 +15,10 @@ const TipoProcesoR = {
   Query: {
     async tipoProceso() {
       return await _TipoProcesoM.default.find();
+    },
+
+    async tipoProcesoCantidad() {
+      return await _TipoProcesoM.default.count();
     }
 
   },

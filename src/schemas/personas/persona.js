@@ -4,6 +4,8 @@ type Query{
     personas:[Persona]   
     personasEliminadas:[Persona]   
     persona(input:PersonaInputBuscarId):[Persona]
+    personaCantidad:Int
+
 }
 
 type Persona{

@@ -38,6 +38,10 @@ const PersonaR = {
           $in: false
         }
       });
+    },
+
+    async personaCantidad() {
+      return await _Persona.default.count();
     }
 
   },

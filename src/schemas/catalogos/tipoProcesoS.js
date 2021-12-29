@@ -2,6 +2,8 @@
 export const TipoProcesoS=`
 type Query{
     tipoProceso:[TipoProceso]   
+    tipoProcesoCantidad:Int
+
 }
 
 type Mutation{

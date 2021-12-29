@@ -13,7 +13,8 @@ const escuelaSchema = new _mongoose.Schema({
       required:true
   },*/
   tipo: String,
-  color: String
+  color: String,
+  colorTextoNegro: Boolean
 });
 
 var _default = (0, _mongoose.model)("EscuelaM", escuelaSchema);

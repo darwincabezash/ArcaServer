@@ -4,7 +4,10 @@ export const TipoProcesoR = {
     Query: {
         async tipoProceso() {
             return await TipoProcesoM.find();
-        }
+        },
+        async tipoProcesoCantidad() {
+            return await TipoProcesoM.count();
+        },
     }, Mutation: {        
         //Crear tipo Proceso
         async crearTipoProceso(_, { input }) {

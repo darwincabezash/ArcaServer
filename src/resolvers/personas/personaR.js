@@ -12,7 +12,10 @@ export const PersonaR = {
         async personasEliminadas() {
             //return await Persona.find({ "estado": input._id });
             return await Persona.find({ estado: { $in: false } });
-        }
+        },
+        async personaCantidad() {
+            return await Persona.count();
+        },
     }, Mutation: {        
         //Crear Persona
         async crearPersona(_, { input }) {
