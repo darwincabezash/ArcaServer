@@ -1,4 +1,4 @@
-import TipoProcesoM from "../models/TipoProcesoM.js";
+import TipoProcesoM from "../../models/configuraciones/catalogos/TipoProcesoM.js";
 
 export const TipoProcesoR = {
     Query: {

@@ -1,7 +1,7 @@
 import express from "express";
 import { graphqlHTTP } from "express-graphql";
 import schema from "./src/schema";
-import { conectarMongoDB } from "./src/databaseDev";
+import { conectarMongoDB } from "./src/bases/databaseLocal";
 const cors = require('cors')
 
 
