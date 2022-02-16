@@ -10,12 +10,14 @@ type Usuario{
     usuario:String
     password:String
     _idPersona:String
+    codIglesia:String
 }
 
 input UsuarioInput{
     usuario:String
     password:String
     _idPersona:String
+    codIglesia:String
 }
 
 type Mutation{

@@ -1,4 +1,4 @@
-import SeminarioM from "../../models/catalogos/SeminarioM.js"
+import SeminarioM from "../../models/configuraciones/catalogos/SeminarioM.js"
 
 export const SeminarioR = {
     Query: {

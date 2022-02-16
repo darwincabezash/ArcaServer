@@ -3,7 +3,9 @@ import {Schema, model  } from "mongoose";
 const escuelaSchema = new Schema({
     tipo:String,
     color: String,
-    idEscuela:String
+    idEscuela: String,
+    colorTextoNegro:Boolean
+
   });
 
 const tipoProcesoSchema = new Schema({
@@ -22,10 +24,7 @@ const seminarioSchema = new Schema({
 
 
 const personaSchema = new Schema({
-    /*firstName:{
-        type:String,
-        required:true
-    },*/
+    codIglesia:String,
     cedula:String,
     primerNombre:String,
     segundoNombre:String,

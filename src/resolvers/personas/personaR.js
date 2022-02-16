@@ -2,6 +2,9 @@ import Persona from "../../models/personas/Persona.js";
 
 export const PersonaR = {
     Query: {
+        async personaIglesia(_, { input }) {
+            return await Persona.find({"codIglesia":input.codIglesia , estado: { $in: [true, null] }})
+        },
         async persona(_, { input }) {
             return await Persona.find({"_id":input._id}).limit(1);
         },

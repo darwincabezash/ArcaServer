@@ -1,15 +1,20 @@
 
 export const Persona=`
 type Query{
+    personaIglesia(input:PersonaInputTodoIglesia):[Persona]
     personas:[Persona]   
     personasEliminadas:[Persona]   
     persona(input:PersonaInputBuscarId):[Persona]
     personaCantidad:Int
 
+
+
+    
 }
 
 type Persona{
     _id:ID
+    codIglesia:String
     cedula:String
     primerNombre:String
     segundoNombre:String
@@ -58,6 +63,8 @@ type Escuela{
     tipo:String
     color:String
     idEscuela:String
+    colorTextoNegro:Boolean
+
 }
 
 type TipoProceso{
@@ -85,7 +92,12 @@ input PersonaInputBuscarId{
     _id:ID
 }
 
+input PersonaInputTodoIglesia{
+    codIglesia:String
+}
+
 input PersonaInputTodo{
+    codIglesia:String
     cedula:String
     primerNombre:String
     segundoNombre:String
@@ -131,6 +143,8 @@ input EscuelaInput{
     tipo:String
     color:String
     idEscuela:String
+    colorTextoNegro:Boolean
+
 }
 
 type TipoProcesoInput{
