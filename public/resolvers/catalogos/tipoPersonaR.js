@@ -7,7 +7,7 @@ exports.TipoPersonaR = void 0;
 
 require("core-js/modules/es.promise.js");
 
-var _TipoPersona = _interopRequireDefault(require("../../models/personas/TipoPersona.js"));
+var _TipoPersona = _interopRequireDefault(require("../../models/configuraciones/catalogos/TipoPersona.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

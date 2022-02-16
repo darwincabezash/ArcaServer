@@ -7,7 +7,7 @@ exports.SeminarioR = void 0;
 
 require("core-js/modules/es.promise.js");
 
-var _SeminarioM = _interopRequireDefault(require("../../models/catalogos/SeminarioM.js"));
+var _SeminarioM = _interopRequireDefault(require("../../models/configuraciones/catalogos/SeminarioM.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

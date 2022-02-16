@@ -10,7 +10,8 @@ var _mongoose = require("mongoose");
 const escuelaSchema = new _mongoose.Schema({
   tipo: String,
   color: String,
-  idEscuela: String
+  idEscuela: String,
+  colorTextoNegro: Boolean
 });
 const tipoProcesoSchema = new _mongoose.Schema({
   tipo: String
@@ -24,10 +25,7 @@ const seminarioSchema = new _mongoose.Schema({
   color: String
 });
 const personaSchema = new _mongoose.Schema({
-  /*firstName:{
-      type:String,
-      required:true
-  },*/
+  codIglesia: String,
   cedula: String,
   primerNombre: String,
   segundoNombre: String,

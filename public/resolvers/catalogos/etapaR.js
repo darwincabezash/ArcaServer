@@ -7,7 +7,7 @@ exports.EtapaR = void 0;
 
 require("core-js/modules/es.promise.js");
 
-var _EtapaM = _interopRequireDefault(require("../../models/catalogos/EtapaM.js"));
+var _EtapaM = _interopRequireDefault(require("../../models/configuraciones/catalogos/EtapaM.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

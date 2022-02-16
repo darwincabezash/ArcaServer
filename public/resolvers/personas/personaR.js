@@ -13,10 +13,22 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const PersonaR = {
   Query: {
-    async persona(_, _ref) {
+    async personaIglesia(_, _ref) {
       let {
         input
       } = _ref;
+      return await _Persona.default.find({
+        "codIglesia": input.codIglesia,
+        estado: {
+          $in: [true, null]
+        }
+      });
+    },
+
+    async persona(_, _ref2) {
+      let {
+        input
+      } = _ref2;
       return await _Persona.default.find({
         "_id": input._id
       }).limit(1);
@@ -47,10 +59,10 @@ const PersonaR = {
   },
   Mutation: {
     //Crear Persona
-    async crearPersona(_, _ref2) {
+    async crearPersona(_, _ref3) {
       let {
         input
-      } = _ref2;
+      } = _ref3;
       console.log(input);
       const nuevaPersona = new _Persona.default(input);
       await nuevaPersona.save();
@@ -58,10 +70,10 @@ const PersonaR = {
     },
 
     //Eliminar Persona
-    async eliminarPersona(_, _ref3) {
+    async eliminarPersona(_, _ref4) {
       let {
         _id
-      } = _ref3;
+      } = _ref4;
       var escuelaEliminada = await _Persona.default.findOneAndUpdate({
         _id: _id
       }, {
@@ -80,11 +92,11 @@ const PersonaR = {
     },
 
     //Actualizar Persona
-    async actualizarPersona(_, _ref4) {
+    async actualizarPersona(_, _ref5) {
       let {
         _id,
         input
-      } = _ref4;
+      } = _ref5;
       return await _Persona.default.findByIdAndUpdate(_id, input, {
         new: true
       });
