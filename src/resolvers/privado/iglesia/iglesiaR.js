@@ -1,4 +1,6 @@
-import IglesiaM from "../../../models/privado/iglesia/IglesiaM.js"
+import IglesiaM from "../../../models/privado/iglesia/iglesiaM.js"
+
+
 
 export const IglesiaR = {
     Query: {
