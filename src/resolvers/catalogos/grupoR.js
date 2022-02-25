@@ -4,6 +4,9 @@ export const GrupoR = {
     Query: {
         async grupo() {
             return await GrupoM.find();
+        },
+        async grupoCantidad() {
+            return await GrupoM.count();
         }
     }, Mutation: {        
         //Crear Grupo

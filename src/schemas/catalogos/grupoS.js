@@ -2,6 +2,7 @@
 export const GrupoS = `
 type Query{
     grupo:[Grupo]
+    grupoCantidad:Int
 }
 
 type Grupo{

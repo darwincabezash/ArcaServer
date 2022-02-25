@@ -56,6 +56,7 @@ type Persona{
     grupos:[Grupo]
     seminarios:[Seminario]
 
+    fechaRegistro:String
 }
 
 type Escuela{
@@ -137,6 +138,7 @@ input PersonaInputTodo{
     grupos:[GrupoInput]
     seminarios:[SeminarioInput]
 
+    fechaRegistro:String
 }
 
 input EscuelaInput{

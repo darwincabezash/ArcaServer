@@ -59,7 +59,8 @@ const personaSchema = new _mongoose.Schema({
   escuelas: [escuelaSchema],
   tipoProcesos: [tipoProcesoSchema],
   grupos: [grupoSchema],
-  seminarios: [seminarioSchema]
+  seminarios: [seminarioSchema],
+  fechaRegistro: String
 });
 
 var _default = (0, _mongoose.model)("Persona", personaSchema);

@@ -97,6 +97,7 @@ const PersonaR = {
         _id,
         input
       } = _ref5;
+      console.log(input);
       return await _Persona.default.findByIdAndUpdate(_id, input, {
         new: true
       });

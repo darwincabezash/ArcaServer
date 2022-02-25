@@ -15,6 +15,10 @@ const SeminarioR = {
   Query: {
     async seminario() {
       return await _SeminarioM.default.find();
+    },
+
+    async seminarioCantidad() {
+      return await _SeminarioM.default.count();
     }
 
   },

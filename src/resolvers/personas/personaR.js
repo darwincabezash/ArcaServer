@@ -47,8 +47,11 @@ export const PersonaR = {
 
         //Actualizar Persona
         async actualizarPersona(_, { _id,input }) {
+            console.log(input);
             return await Persona.findByIdAndUpdate(_id, input, { new: true });
         },
+
+        
     }
 
 }

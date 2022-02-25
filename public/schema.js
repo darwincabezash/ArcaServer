@@ -31,6 +31,8 @@ var _diezmoS = require("./schemas/finanzas/diezmos/diezmoS");
 
 var _iglesiaS = require("./schemas/privado/iglesia/iglesiaS");
 
+var _typeDefsx = require("./schemas/catalogos/typeDefsx");
+
 var _personaR = require("./resolvers/personas/personaR.js");
 
 var _tipoPersonaR = require("./resolvers/catalogos/tipoPersonaR.js");
@@ -55,11 +57,13 @@ var _diezmoR = require("./resolvers/finzanzas/diezmos/diezmoR");
 
 var _iglesiaR = require("./resolvers/privado/iglesia/iglesiaR");
 
+var _autor = require("./resolvers/catalogos/autor");
+
 //Schemas
 //Resolvers
 var _default = (0, _schema.makeExecutableSchema)({
-  typeDefs: [_persona.Persona, _tipoPersona.TipoPersona, _tipoProcesoS.TipoProcesoS, _grupoS.GrupoS, _escuelaS.EscuelaS, _etapaS.EtapaS, _usuarioS.UsuarioS, _permisoS.PermisoS, _utilidadesS.UtilidadesS, _seminarioS.SeminarioS, _diezmoS.DiezmoS, _iglesiaS.IglesiaS],
-  resolvers: [_personaR.PersonaR, _tipoPersonaR.TipoPersonaR, _tipoProcesoR.TipoProcesoR, _grupoR.GrupoR, _escuelaR.EscuelaR, _etapaR.EtapaR, _usuarioR.UsuarioR, _permisoR.PermisoR, _utilidadesR.UtilidadesR, _seminarioR.SeminarioR, _diezmoR.DiezmoR, _iglesiaR.IglesiaR]
+  typeDefs: [_persona.Persona, _tipoPersona.TipoPersona, _tipoProcesoS.TipoProcesoS, _grupoS.GrupoS, _escuelaS.EscuelaS, _etapaS.EtapaS, _usuarioS.UsuarioS, _permisoS.PermisoS, _utilidadesS.UtilidadesS, _seminarioS.SeminarioS, _diezmoS.DiezmoS, _iglesiaS.IglesiaS, _typeDefsx.typeDefsx],
+  resolvers: [_personaR.PersonaR, _tipoPersonaR.TipoPersonaR, _tipoProcesoR.TipoProcesoR, _grupoR.GrupoR, _escuelaR.EscuelaR, _etapaR.EtapaR, _usuarioR.UsuarioR, _permisoR.PermisoR, _utilidadesR.UtilidadesR, _seminarioR.SeminarioR, _diezmoR.DiezmoR, _iglesiaR.IglesiaR, _autor.AutorLibroW]
 });
 
 exports.default = _default;

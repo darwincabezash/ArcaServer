@@ -2,6 +2,7 @@
 export const SeminarioS=`
 type Query{
     seminario:[Seminario]   
+    seminarioCantidad:Int
 }
 
 type Seminario{

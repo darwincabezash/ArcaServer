@@ -15,6 +15,10 @@ const GrupoR = {
   Query: {
     async grupo() {
       return await _GrupoM.default.find();
+    },
+
+    async grupoCantidad() {
+      return await _GrupoM.default.count();
     }
 
   },

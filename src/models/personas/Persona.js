@@ -59,12 +59,14 @@ const personaSchema = new Schema({
     fechaBautizmo:String,
     lugarBautizmo:String,
     responsableBautizmo: String,
+
     
     escuelas: [escuelaSchema],
     tipoProcesos: [tipoProcesoSchema],
     grupos: [grupoSchema],
-    seminarios:[seminarioSchema]
+    seminarios:[seminarioSchema],
 
+    fechaRegistro:String,
 });
 
 export default model("Persona", personaSchema);

@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.GrupoS = void 0;
-const GrupoS = "\ntype Query{\n    grupo:[Grupo]\n}\n\ntype Grupo{\n    _id:ID\n    tipo:String\n    permisos:[Perm]\n}\n\ntype Perm{\n    _id:String,\n    idPermiso:String,\n    nombre:String\n}\n\n\ninput GrupoInput{\n    tipo:String,\n    permisos:[PermInput]\n}\n\ninput PermInput{\n    idPermiso:String,\n    nombre:String\n}\n\ntype Mutation{\n    crearGrupo(input:GrupoInput):Grupo\n    eliminarGrupo(_id:ID):Grupo\n    actualizarGrupo(_id:ID,input:GrupoInput):Grupo\n}\n";
+const GrupoS = "\ntype Query{\n    grupo:[Grupo]\n    grupoCantidad:Int\n}\n\ntype Grupo{\n    _id:ID\n    tipo:String\n    permisos:[Perm]\n}\n\ntype Perm{\n    _id:String,\n    idPermiso:String,\n    nombre:String\n}\n\n\ninput GrupoInput{\n    tipo:String,\n    permisos:[PermInput]\n}\n\ninput PermInput{\n    idPermiso:String,\n    nombre:String\n}\n\ntype Mutation{\n    crearGrupo(input:GrupoInput):Grupo\n    eliminarGrupo(_id:ID):Grupo\n    actualizarGrupo(_id:ID,input:GrupoInput):Grupo\n}\n";
 /*
 
 
