@@ -60,8 +60,8 @@ const personaSchema = new Schema({
     lugarBautizmo:String,
     responsableBautizmo: String,
 
-    
-    escuelas: [escuelaSchema],
+    escuelas:[{ type: Schema.Types.ObjectId}],
+    //escuelas: [escuelaSchema],
     tipoProcesos: [tipoProcesoSchema],
     grupos: [grupoSchema],
     seminarios:[seminarioSchema],
@@ -70,3 +70,5 @@ const personaSchema = new Schema({
 });
 
 export default model("Persona", personaSchema);
+
+

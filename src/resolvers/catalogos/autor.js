@@ -15,17 +15,18 @@ export const AutorLibroW = {
                 [
                     {
                         $lookup: {
-                            from: "libros",
-                            localField: "libros",
-                            foreignField: "_id",
-                            as:"AutorLibros"
+                            from: "libros",  //COLECCION : poner el nombre de la coleccion de la base
+                            localField: "libros",   //CAMPO LOCAL   
+                            foreignField: "_id",    //CAMPO FORANEO
+                            as:"AutorLibros"    //ALIAS
                         }
                     }
                 ]
             )
 
             console.log("********* RESULTADO *********");
-            console.log(JSON.stringify(resultado) );
+            //console.log(JSON.stringify(resultado) );
+            return resultado;
         }
         
     }, Mutation: {        

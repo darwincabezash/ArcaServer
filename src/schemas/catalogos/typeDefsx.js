@@ -9,6 +9,7 @@ type Autor {
   _id: ID!
   name: String!
   libros: [ID]
+  AutorLibros:[Libro]!
 }
 
 input AutorInput {

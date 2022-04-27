@@ -51,7 +51,9 @@ type Persona{
     lugarBautizmo:String
     responsableBautizmo:String
 
-    escuelas:[Escuela]
+    listaEscuelas:[Escuela]!
+    
+    escuelas: [ID]
     tipoProcesos:[TipoProceso]
     grupos:[Grupo]
     seminarios:[Seminario]
@@ -132,6 +134,7 @@ input PersonaInputTodo{
     fechaBautizmo:String
     lugarBautizmo:String
     responsableBautizmo:String
+
 
     escuelas:[EscuelaInput]
     tipoProcesos:[TipoProcesoInput]
