@@ -5,7 +5,6 @@ const escuelaSchema = new Schema({
     color: String,
     idEscuela: String,
     colorTextoNegro:Boolean
-
   });
 
 const tipoProcesoSchema = new Schema({
@@ -60,7 +59,7 @@ const personaSchema = new Schema({
     lugarBautizmo:String,
     responsableBautizmo: String,
 
-    escuelas:[{ type: Schema.Types.ObjectId}],
+    escuelas: [{ type: Schema.Types.ObjectId }],
     //escuelas: [escuelaSchema],
     tipoProcesos: [tipoProcesoSchema],
     grupos: [grupoSchema],

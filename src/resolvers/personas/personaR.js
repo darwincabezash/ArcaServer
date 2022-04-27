@@ -70,6 +70,9 @@ export const PersonaR = {
         },
 
 
+        
+
+
         async personasEliminadas() {
             //return await Persona.find({ "estado": input._id });
             return await Persona.find({ estado: { $in: false } });

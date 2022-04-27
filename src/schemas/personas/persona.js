@@ -5,11 +5,7 @@ type Query{
     personas:[Persona]   
     personasEliminadas:[Persona]   
     persona(input:PersonaInputBuscarId):[Persona]
-    personaCantidad:Int
-
-
-
-    
+    personaCantidad:Int 
 }
 
 type Persona{
@@ -60,6 +56,10 @@ type Persona{
 
     fechaRegistro:String
 }
+
+
+
+
 
 type Escuela{
     _id:ID
