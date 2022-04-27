@@ -7,98 +7,64 @@ exports.default = void 0;
 
 var _schema = require("@graphql-tools/schema");
 
-var _resolvers = require("./resolvers");
+var _persona = require("./schemas/personas/persona.js");
 
-const typeDefs = "\n\ntype Query{\n    hello:String\n    nuevo(name: String!):String\n    greet(name: String!):String\n    usandoDestructuracion(name: String):String\n    task:[Task]\n    user:[User]\n    persona:[Persona]   \n\n}\n\ntype Task{\n    _id:ID\n    title:String!\n    description:String!\n    number:Int\n}\n\ntype User{\n    _id:ID\n    firstName:String\n    lastName:String\n    age:Int\n}\n\ntype Persona{\n    _id:ID\n    cedula:String\n    primerNombre:String\n    segundoNombre:String\n    primerApellido:String\n    segundoApellido:String\n    telefono:String\n    celular:String\n    email:String\n    sexo:String\n    foto:String\n}\n\n\n\n\ntype Mutation{\n    createTask(input:TaskInput):Task\n    createUser(input:UserInput):User\n    deleteUser(_id:ID):User\n    updateUser(_id:ID,input:UserInput):User\n    crearPersona(input:PersonaInput):Persona\n\n}\n\ninput TaskInput{\n    title:String!\n    description:String!\n    number:Int \n}\n\ninput UserInput{\n    firstName:String\n    lastName:String\n    age:Int\n}\n\ninput PersonaInput{\n    cedula:String\n    primerNombre:String\n    segundoNombre:String\n    primerApellido:String\n    segundoApellido:String\n    telefono:String\n    celular:String\n    email:String\n    sexo:String\n    foto:String\n}\n\n\n";
+var _tipoPersona = require("./schemas/catalogos/tipoPersona.js");
 
+var _tipoProcesoS = require("./schemas/catalogos/tipoProcesoS.js");
+
+var _grupoS = require("./schemas/catalogos/grupoS.js");
+
+var _escuelaS = require("./schemas/catalogos/escuelaS.js");
+
+var _etapaS = require("./schemas/catalogos/etapaS.js");
+
+var _usuarioS = require("./schemas/personas/usuarioS");
+
+var _permisoS = require("./schemas/catalogos/permisoS");
+
+var _utilidadesS = require("./schemas/utilidades/utilidadesS");
+
+var _seminarioS = require("./schemas/catalogos/seminarioS");
+
+var _diezmoS = require("./schemas/finanzas/diezmos/diezmoS");
+
+var _iglesiaS = require("./schemas/privado/iglesia/iglesiaS");
+
+var _typeDefsx = require("./schemas/catalogos/typeDefsx");
+
+var _personaR = require("./resolvers/personas/personaR.js");
+
+var _tipoPersonaR = require("./resolvers/catalogos/tipoPersonaR.js");
+
+var _tipoProcesoR = require("./resolvers/catalogos/tipoProcesoR.js");
+
+var _grupoR = require("./resolvers/catalogos/grupoR.js");
+
+var _escuelaR = require("./resolvers/catalogos/escuelaR.js");
+
+var _etapaR = require("./resolvers/catalogos/etapaR.js");
+
+var _usuarioR = require("./resolvers/personas/usuarioR");
+
+var _permisoR = require("./resolvers/catalogos/permisoR");
+
+var _utilidadesR = require("./resolvers/utilidades/utilidadesR");
+
+var _seminarioR = require("./resolvers/catalogos/seminarioR");
+
+var _diezmoR = require("./resolvers/finzanzas/diezmos/diezmoR");
+
+var _iglesiaR = require("./resolvers/privado/iglesia/iglesiaR");
+
+var _autor = require("./resolvers/catalogos/autor");
+
+//Schemas
+//Resolvers
 var _default = (0, _schema.makeExecutableSchema)({
-  typeDefs: typeDefs,
-  resolvers: _resolvers.resolvers
+  typeDefs: [_persona.Persona, _tipoPersona.TipoPersona, _tipoProcesoS.TipoProcesoS, _grupoS.GrupoS, _escuelaS.EscuelaS, _etapaS.EtapaS, _usuarioS.UsuarioS, _permisoS.PermisoS, _utilidadesS.UtilidadesS, _seminarioS.SeminarioS, _diezmoS.DiezmoS, _iglesiaS.IglesiaS, _typeDefsx.typeDefsx],
+  resolvers: [_personaR.PersonaR, _tipoPersonaR.TipoPersonaR, _tipoProcesoR.TipoProcesoR, _grupoR.GrupoR, _escuelaR.EscuelaR, _etapaR.EtapaR, _usuarioR.UsuarioR, _permisoR.PermisoR, _utilidadesR.UtilidadesR, _seminarioR.SeminarioR, _diezmoR.DiezmoR, _iglesiaR.IglesiaR, _autor.AutorLibroW]
 });
-/*
-
-const typeDefs = `
-
-type Query{
-    hello:String
-    nuevo(name: String!):String
-    greet(name: String!):String
-    usandoDestructuracion(name: String):String
-    task:[Task]
-    user:[User]
-    persona:[Persona]   
-
-}
-
-type Task{
-    _id:ID
-    title:String!
-    description:String!
-    number:Int
-}
-
-type User{
-    _id:ID
-    firstName:String
-    lastName:String
-    age:Int
-}
-
-type Persona{
-    _id:ID
-    cedula:String
-    primerNombre:String
-    segundoNombre:String
-    primerApellido:String
-    segundoApellido:String
-    telefono:String
-    celular:String
-    email:String
-    sexo:String
-    foto:String
-}
-
-
-
-type Mutation{
-    createTask(input:TaskInput):Task
-    createUser(input:UserInput):User
-    deleteUser(_id:ID):User
-    updateUser(_id:ID,input:UserInput):User
-    crearPersona(input:PersonaInput):Persona
-
-}
-
-input TaskInput{
-    title:String!
-    description:String!
-    number:Int 
-}
-
-input UserInput{
-    firstName:String
-    lastName:String
-    age:Int
-}
-
-input PersonaInput{
-    cedula:String
-    primerNombre:String
-    segundoNombre:String
-    primerApellido:String
-    segundoApellido:String
-    telefono:String
-    celular:String
-    email:String
-    sexo:String
-    foto:String
-}
-
-
-`;
-
-*/
-
 
 exports.default = _default;
 //# sourceMappingURL=schema.js.map

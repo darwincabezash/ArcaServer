@@ -14,6 +14,8 @@ import { SeminarioS } from "./schemas/catalogos/seminarioS";
 import { DiezmoS } from "./schemas/finanzas/diezmos/diezmoS";
 import { IglesiaS } from "./schemas/privado/iglesia/iglesiaS";
 
+import { typeDefsx } from "./schemas/catalogos/typeDefsx";
+
 
 //Resolvers
 import {PersonaR} from "./resolvers/personas/personaR.js";
@@ -27,10 +29,18 @@ import { PermisoR } from "./resolvers/catalogos/permisoR";
 import { UtilidadesR } from "./resolvers/utilidades/utilidadesR";
 import { SeminarioR } from "./resolvers/catalogos/seminarioR";
 import { DiezmoR } from "./resolvers/finzanzas/diezmos/diezmoR";
-import {IglesiaR } from "./resolvers/privado/iglesia/iglesiaR";
+import { IglesiaR } from "./resolvers/privado/iglesia/iglesiaR";
+
+import {AutorLibroW } from "./resolvers/catalogos/autor";
+
 
 
 export default makeExecutableSchema({
-    typeDefs:[Persona,TipoPersona,TipoProcesoS,GrupoS,EscuelaS,EtapaS,UsuarioS,PermisoS,UtilidadesS,SeminarioS,DiezmoS,IglesiaS],
-    resolvers:[PersonaR,TipoPersonaR,TipoProcesoR,GrupoR,EscuelaR,EtapaR,UsuarioR,PermisoR,UtilidadesR,SeminarioR,DiezmoR,IglesiaR]
+    typeDefs:[Persona,TipoPersona,TipoProcesoS,GrupoS,EscuelaS,EtapaS,UsuarioS,PermisoS,UtilidadesS,SeminarioS,DiezmoS,IglesiaS,typeDefsx],
+    resolvers:[PersonaR,TipoPersonaR,TipoProcesoR,GrupoR,EscuelaR,EtapaR,UsuarioR,PermisoR,UtilidadesR,SeminarioR,DiezmoR,IglesiaR,AutorLibroW]
 });
+
+
+
+
+

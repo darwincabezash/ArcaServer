@@ -51,11 +51,14 @@ type Persona{
     lugarBautizmo:String
     responsableBautizmo:String
 
-    escuelas:[Escuela]
+    listaEscuelas:[Escuela]!
+    
+    escuelas: [ID]
     tipoProcesos:[TipoProceso]
     grupos:[Grupo]
     seminarios:[Seminario]
 
+    fechaRegistro:String
 }
 
 type Escuela{
@@ -63,6 +66,8 @@ type Escuela{
     tipo:String
     color:String
     idEscuela:String
+    colorTextoNegro:Boolean
+
 }
 
 type TipoProceso{
@@ -95,6 +100,7 @@ input PersonaInputTodoIglesia{
 }
 
 input PersonaInputTodo{
+    codIglesia:String
     cedula:String
     primerNombre:String
     segundoNombre:String
@@ -129,17 +135,21 @@ input PersonaInputTodo{
     lugarBautizmo:String
     responsableBautizmo:String
 
+
     escuelas:[EscuelaInput]
     tipoProcesos:[TipoProcesoInput]
     grupos:[GrupoInput]
     seminarios:[SeminarioInput]
 
+    fechaRegistro:String
 }
 
 input EscuelaInput{
     tipo:String
     color:String
     idEscuela:String
+    colorTextoNegro:Boolean
+
 }
 
 type TipoProcesoInput{

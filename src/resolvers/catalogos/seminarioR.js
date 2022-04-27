@@ -4,7 +4,10 @@ export const SeminarioR = {
     Query: {
         async seminario() {
             return await SeminarioM.find();
-        }
+        },
+        async seminarioCantidad() {
+            return await SeminarioM.count();
+        },
     }, Mutation: {        
         //Crear Seminario
         async crearSeminario(_, { input }) {

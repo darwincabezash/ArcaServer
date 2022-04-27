@@ -1,4 +1,4 @@
-import EscuelaM from "../../models/configuraciones/catalogos/EscuelaM.js"
+import EscuelaM from "../models/EscuelaM.js"
 
 export const EscuelaR = {
     Query: {

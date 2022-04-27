@@ -3,7 +3,9 @@ import {Schema, model  } from "mongoose";
 const escuelaSchema = new Schema({
     tipo:String,
     color: String,
-    idEscuela:String
+    idEscuela: String,
+    colorTextoNegro:Boolean
+
   });
 
 const tipoProcesoSchema = new Schema({
@@ -57,12 +59,16 @@ const personaSchema = new Schema({
     fechaBautizmo:String,
     lugarBautizmo:String,
     responsableBautizmo: String,
-    
-    escuelas: [escuelaSchema],
+
+    escuelas:[{ type: Schema.Types.ObjectId}],
+    //escuelas: [escuelaSchema],
     tipoProcesos: [tipoProcesoSchema],
     grupos: [grupoSchema],
-    seminarios:[seminarioSchema]
+    seminarios:[seminarioSchema],
 
+    fechaRegistro:String,
 });
 
 export default model("Persona", personaSchema);
+
+
