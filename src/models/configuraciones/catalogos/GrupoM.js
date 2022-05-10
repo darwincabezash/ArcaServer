@@ -7,7 +7,8 @@ const permSchema = new Schema({
 
 
 const grupoSchema = new Schema({
-    tipo:String,
+    tipo: String,
+    color: String,
     permisos:[permSchema]
 });
 

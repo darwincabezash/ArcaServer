@@ -7,8 +7,6 @@ exports.AutorLibroW = void 0;
 
 require("core-js/modules/es.promise.js");
 
-require("core-js/modules/es.json.stringify.js");
-
 var _Autor = _interopRequireDefault(require("../../models/configuraciones/catalogos/Autor.js"));
 
 var _Libro = _interopRequireDefault(require("../../models/configuraciones/catalogos/Libro"));
@@ -27,13 +25,18 @@ const AutorLibroW = {
       const resultado = await _Autor.default.aggregate([{
         $lookup: {
           from: "libros",
+          //COLECCION : poner el nombre de la coleccion de la base
           localField: "libros",
+          //CAMPO LOCAL   
           foreignField: "_id",
-          as: "AutorLibros"
+          //CAMPO FORANEO
+          as: "AutorLibros" //ALIAS
+
         }
       }]);
-      console.log("********* RESULTADO *********");
-      console.log(JSON.stringify(resultado));
+      console.log("********* RESULTADO *********"); //console.log(JSON.stringify(resultado) );
+
+      return resultado;
     }
 
   },

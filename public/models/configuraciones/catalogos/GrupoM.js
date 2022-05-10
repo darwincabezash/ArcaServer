@@ -13,6 +13,7 @@ const permSchema = new _mongoose.Schema({
 });
 const grupoSchema = new _mongoose.Schema({
   tipo: String,
+  color: String,
   permisos: [permSchema]
 });
 
